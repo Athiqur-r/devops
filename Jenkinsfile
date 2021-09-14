@@ -3,14 +3,14 @@ pipeline {
      stages {
         stage("Build") {
             steps {
-                sh "sudo npm install"
-                sh "sudo npm run build"
+                bat "npm install"
+                bat "npm run build"
             }
         }
         stage("Deploy") {
             steps {
-                sh "sudo rm -rf /var/www/jenkins-react-app"
-                sh "sudo cp -r ${WORKSPACE}/build/ /jenkins-react-app/"
+                bat "rmdir /s /q /jenkins-react-app"
+                bat "cp -r ${WORKSPACE}/build/ /jenkins-react-app/"
             }
         }
     }
