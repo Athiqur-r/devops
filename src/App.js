@@ -1,5 +1,5 @@
 import "./App.css";
-import logo as "./logo.svg";
+import "./logo.svg";
 
 function App() {
   return <div className="App">Hello World</div>;
