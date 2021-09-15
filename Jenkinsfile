@@ -1,7 +1,7 @@
 pipeline {
      agent any
      environment {
-       CI = 'false'                               //can be used in whole pipeline
+       CI = true                               //can be used in whole pipeline
      }
      stages {
         stage("Build") {
