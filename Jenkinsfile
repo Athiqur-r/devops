@@ -12,8 +12,6 @@ pipeline {
         }
         stage ("Deploy") {
              steps {
-                  sh "sudo -S ssh -i '/home/innomick/Downloads/idmt-dev.pem' ubuntu@ec2-3-109-78-90.ap-south-1.compute.amazonaws.com rm -rf /var/www/html/*"
-                  sh "ssh 123"
                   sh "ssh ubuntu@3.109.78.90 mkdir -p /var/www/html"
                   sh "scp -r dist ubuntu@3.109.78.90:/var/www/html/*"
              }
