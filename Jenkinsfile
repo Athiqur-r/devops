@@ -1,4 +1,4 @@
-pipeline {
+node {
      agent any
      environment {
        CI = true                               //can be used in whole pipeline
